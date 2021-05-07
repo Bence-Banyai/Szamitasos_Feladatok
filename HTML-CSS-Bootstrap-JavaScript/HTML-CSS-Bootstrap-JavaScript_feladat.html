@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>HTML-CSS-Bootstrap-JavaScript feladat</title>
+
+</head>
+
+<body>
+    <h1 class="display-1">HTML-CSS-Bootstrap-JavaScript feladat</h1>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="validation.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">Háromszög
+                <div class="card" style="width: 18rem;">
+                    <img src="triangle.svg" class="card-img-top" alt="triangle">
+                    <div class="card-body">
+                        <h5 class="card-title">Háromszög</h5>
+                        <p class="card-text">Kerületének és területének számítása.</p>
+                        <form class="row g-3 needs-validation" novalidate id="form1">
+                            <div class="col-md-4">
+                                <label for="haromszogA" class="form-label">a</label>
+                                <input type="text" required class="form-control" id="haromszogA" oninput="check(this)" maxlength="4" size="4">mm
+                                <div class="invalid-feedback">
+                                    Adja meg az a oldalt!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="haromszogB" class="form-label">b</label>
+                                <input type="text" required class="form-control" id="haromszogB" oninput="check(this)" maxlength="4" size="4">mm
+                                <div class="invalid-feedback">
+                                    Adja meg a b oldalt!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="haromszogC" class="form-label">c</label>
+                                <input type="text" required class="form-control" id="haromszogC" oninput="check(this)" maxlength="4" size="4">mm
+                                <div class="invalid-feedback">
+                                    Adja meg a c oldalt!
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="button" class="btn btn-primary" value="Számítás" onclick="haromszogSzamitas()">
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <p id="haromszogKerulet"></p>
+                        <p id="haromszogTerulet"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">Kör
+                <div class="card" style="width: 18rem;">
+                    <img src="kör.svg" class="card-img-top" alt="kör">
+                    <div class="card-body">
+                        <h5 class="card-title">Kör</h5>
+                        <p class="card-text">Kerületének és területének számítása.</p>
+                        <form class="row g-3 needs-validation" novalidate id="form2">
+                            <div class="col-md-4">
+                                <label for="korSugar" class="form-label">r</label>
+                                <input type="text" class="form-control" id="korSugar" required oninput="check(this)" maxlength="4" size="4">mm
+                                <div class="invalid-feedback">
+                                    Adja meg a sugarat!
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="button" class="btn btn-primary" value="Számítás" onclick="korSzamitas()">
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <p id="korKerulet"></p>
+                        <p id="korTerulet"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">Kúp
+                <div class="card" style="width: 18rem;">
+                    <img src="kúp.svg" class="card-img-top" alt="kúp">
+                    <div class="card-body">
+                        <h5 class="card-title">Kúp</h5>
+                        <p class="card-text">Felszínének és Területének számítása.</p>
+                        <form class="row g-3 needs-validation" novalidate id="form3">
+                            <div class="col-md-4">
+                                <label for="kupSugar" class="form-label">r</label>
+                                <input type="text" class="form-control" id="kupSugar" required oninput="check(this)" maxlength="4" size="4">mm
+                                <div class="invalid-feedback">
+                                    Az alapkör sugara?
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="kupMagassag" class="form-label">m</label>
+                                <input type="text" class="form-control" id="kupMagassag" required oninput="check(this)" maxlength="4" size="4">mm
+                                <div class="invalid-feedback">
+                                    Érvénytelen magasság!
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="button" class="btn btn-primary" value="Számítás" onclick="kupSzamitas()">
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <p id="kupFelszin"></p>
+                        <p id="kupTerfogat"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">Gömb
+                <div class="card" style="width: 18rem;">
+                    <img src="gömb.svg" class="card-img-top" alt="gömb">
+                    <div class="card-body">
+                        <h5 class="card-title">Gömb</h5>
+                        <p class="card-text">Felszínének és Területének számítása.</p>
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-4">
+                                <label for="gombSugar" class="form-label" id="form4">r</label>
+                                <input type="text" class="form-control" id="gombSugar" required oninput="check(this)" maxlength="4" size="4">mm
+                                <div class="invalid-feedback">
+                                    Adja meg a sugarat!
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <input type="button" class="btn btn-primary" value="Számítás" onclick="gombSzamitas()">
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <p id="gombFelszin"></p>
+                        <p id="gombTerfogat"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

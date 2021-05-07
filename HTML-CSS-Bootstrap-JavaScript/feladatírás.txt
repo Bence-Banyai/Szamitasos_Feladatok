@@ -1,0 +1,34 @@
+HTML-CSS-Bootstrap-JavaScript feladat
+=====================================
+
+Választani kell 2db tetszőleges síkidomot és 2db testet:
+- legyen hozzá ábra, a terület és kerület számításához szükséges jelölésekkel
+- beviteli mező címkéje legyen összhangban az ábra jelöléséve
+- beviteli mező után legyen mértékegység
+- határozzad meg JavaScript programmal a síkidomok kerületét és területét.
+-adatbevitel kezeljen le minden hibalehetőséget, reakciók erre az esetre
+ (negatív és nulla érték, NaN értékek a konverzió után)
+- szerkeszthetőség ellenőrzése, ha lehetséges
+- hibák jelzése az oldalon vagy felugró ablakokkal
+- terület kerület, térfogat felszín számítás elvégzése
+- saját függvények készítése a számításokhoz (T, K, A, V)
+- azonosítók választása a szabályok szerint
+ (camel case, azonosító utal funkcióra, megfelelő karakterszám)
+- eredmények megjelenítése mértékegységgel
+- mértékegység választás listával (nem kötelező) input adatoknál, vagy az eredménynél
+- innerText vs innerHTML ??? <b> -> félkövér
+- Bootstrap rács kialakítása, egy-egy feladat egy-egy kártya legyen
+- 3db töréspont, 4x1, 2x2, 1x4 rács kialakítással
+- oldal feltöltése GitHub-ra, GitHub Pages beállítása, oldal ellenőrzése telefonon
+- saját kreatív ötletek megvalósítása
+
+Python feladat:
+===============
+
+- 4db program készítése 
+- a választott síkidomok és testek (T, K, A, V) számításai
+- saját függvények készítése a számításokhoz (T, K, A, V)
+- azonosítók választása a szabályok szerint
+ (snake_case, azonosító utal funkcióra, megfelelő karakterszám)
+- programok feltöltése a GitHub-ra külön-külön repokba
+
