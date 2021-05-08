@@ -66,7 +66,7 @@ function korSzamitas() {
   var k;
 
   if (r > 0) {
-    t = (r ^ 2) * Math.PI;
+    t = r ** 2 * Math.PI;
     k = Math.PI * 2 * r;
 
     document.getElementById("korKerulet").innerHTML =
@@ -87,8 +87,8 @@ function kupSzamitas() {
   var V;
 
   if (r > 0 && m > 0) {
-    A = (r ^ 2) * Math.PI + r * Math.PI * Math.sqrt((r ^ 2) + (m ^ 2));
-    V = ((r ^ 2) * Math.PI * m) / 3;
+    A = r ** 2 * Math.PI + r * Math.PI * Math.sqrt(r ** 2 + m ** 2);
+    V = (r ** 2 * Math.PI * m) / 3;
 
     document.getElementById("kupFelszin").innerHTML =
       "Felszín: " + A.toFixed(2) + " mm<sup>2</sup>";
@@ -106,8 +106,8 @@ function gombSzamitas() {
   var V;
 
   if (r > 0) {
-    A = (r ^ 2) * 4 * Math.PI;
-    V = (Math.PI * 4 * (r ^ 3)) / 3;
+    A = r ** 2 * 4 * Math.PI;
+    V = (Math.PI * 4 * r ** 3) / 3;
 
     document.getElementById("gombFelszin").innerHTML =
       "Felszín: " + A.toFixed(2) + " mm<sup>2</sup>";
